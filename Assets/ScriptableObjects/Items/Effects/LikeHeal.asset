@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc9eac1c59a1c2e4482cfdf9a701f9ab, type: 3}
+  m_Name: LikeHeal
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: some
+  <Icon>k__BackingField: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: e36d1a38d7aa309409e80bf66a089330, type: 3}
+  <Description>k__BackingField: some
+  <FormulaicItem>k__BackingField: {fileID: 7175240306928288104, guid: cae43c11d94d25a4582055f009b0ef25, type: 3}

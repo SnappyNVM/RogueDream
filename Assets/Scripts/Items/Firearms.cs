@@ -7,6 +7,7 @@ public sealed class Firearms : Weapon
     private void Awake()
     {
         WeaponConfig = FirearmsConfig;
-        Config = WeaponConfig;       
+        Config = WeaponConfig;
+        Debug.Log("Firearms works!");
     }
 }

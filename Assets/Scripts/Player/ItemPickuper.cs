@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ItemPickuper : MonoBehaviour
@@ -22,18 +23,25 @@ public class ItemPickuper : MonoBehaviour
     {
         if (_player.MovementHandler.IsInteractiveButtonPressed && _stayingInsideOfItem)
         {
-            if (_player.Inventory.Item1 == null)
-                _player.Inventory.Item1 = _takingItem.Config;
-            else if (_player.Inventory.Item2 == null)
-                _player.Inventory.Item2 = _takingItem.Config;
-            else if (_player.Inventory.Item3 == null)
-                _player.Inventory.Item3 = _takingItem.Config;
-            else
-                _player.Inventory.Item1 = _takingItem.Config;
-            // Rare case when copy paste probably justified, don't hit me!
-            // 2hard2 realize it other way
+            bool configReplaced = false;
+            for (int i = 0; i < _player.Inventory.Items.Length; i++)
+            {
+                if (_player.Inventory.Items[i] == null)
+                {
+                    configReplaced = true;
+                    _player.Inventory.ChangeItem(_takingItem.Config, i);
+                    break;
+                }
+            }
+
+            if (configReplaced == false) 
+            {
+                _player.ItemDropper.DropItem(_player.Inventory.InventoryPanel.CurrentSelectedCell);
+                _player.Inventory.ChangeItem(_takingItem.Config,
+                _player.Inventory.InventoryPanel.CurrentSelectedCell);
+            }
+
             Destroy(_takingItem.gameObject);
-            _takingItem = null;
         }
     }
 

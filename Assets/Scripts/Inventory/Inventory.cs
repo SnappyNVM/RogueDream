@@ -4,46 +4,32 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Inventory", menuName = "Data/Inventory")]
 public class Inventory : ScriptableObject
 {
-    public InventoryItemConfig[] Items => new InventoryItemConfig[] { Item1, Item2, Item3 };
-
-    public InventoryItemConfig Item1 { get => _item1;
-        set
-        {
-            _item1 = value;
-            UpdateItem(value, 0);
-        }
-    }
-    public InventoryItemConfig Item2 { get => _item2;
-        set
-        {
-            _item2 = value;
-            UpdateItem(value, 1);
-        }
-    }
-    public InventoryItemConfig Item3 { get => _item3;
-        set
-        {
-            _item3 = value;
-            UpdateItem(value, 2);
-        }
-    }
-
-    // Transmitted item and inventory index of it
-    public event Action<InventoryItemConfig, int> InventoryFillingChanged;
-
-    public InventoryPanel InventoryPanel { get; set; }
-
-    public void ChangeItem(InventoryItemConfig inventoryItemConfig, int itemID)
-    { 
-    
-    }
-
     [SerializeField] private InventoryItemConfig _item1;
     [SerializeField] private InventoryItemConfig _item2;
     [SerializeField] private InventoryItemConfig _item3;
 
-    private void UpdateItem(InventoryItemConfig item, int index) =>
-        InventoryFillingChanged?.Invoke(item, index);
+    public InventoryItemConfig[] Items => new InventoryItemConfig[] { _item1, _item2, _item3 };
+    public InventoryItemConfig Item1 => _item1;
+    public InventoryItemConfig Item2 => _item2;
+    public InventoryItemConfig Item3  => _item3;
+    public InventoryPanel InventoryPanel { get; set; }
+
+    // Transmitted item and inventory index of it
+    public event Action<InventoryItemConfig, int> InventoryFillingChanged;
+
+
+    public void ChangeItem(InventoryItemConfig inventoryItemConfig, int itemID)
+    {
+        if (itemID == 0)
+            _item1 = inventoryItemConfig;
+        else if (itemID == 1)
+            _item2 = inventoryItemConfig;
+        else if (itemID == 2)
+            _item3 = inventoryItemConfig;
+        // Probably rarely case when DRY will be not optimized way to code, just don't hit me
+        
+        InventoryFillingChanged?.Invoke(inventoryItemConfig, itemID);
+    }
 
     public void Initialize(InventoryPanel inventoryPanel)
     {

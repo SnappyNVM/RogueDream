@@ -8,10 +8,10 @@ public class Player : MonoBehaviour
     private PlayerConfig _playerConfig;
     private Inventory _inventory;
     private ItemPickuper _itemPickuper;
-
-    [SerializeField] private CapsuleCollider2D _collider;
-    [SerializeField] private Rigidbody2D _rigidbody;
-    [SerializeField] private ItemDresser _itemDresser;
+    private CapsuleCollider2D _collider;
+    private Rigidbody2D _rigidbody;
+    private ItemDresser _itemDresser;
+    private ItemDropper _itemDropper;
 
     public Rigidbody2D Rigidbody => _rigidbody;
     public MovementHandler MovementHandler => _movementHandler;
@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public Collider2D Collider => _collider;
     public ItemPickuper ItemPickuper => _itemPickuper;  
     public ItemDresser ItemDresser => _itemDresser;
+    public ItemDropper ItemDropper => _itemDropper;
 
     private void OnValidate()
     {
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
         _rigidbody ??= GetComponent<Rigidbody2D>();
         _itemPickuper ??= GetComponent<ItemPickuper>();
         _itemDresser ??= GetComponent<ItemDresser>();
+        _itemDropper ??= GetComponent<ItemDropper>();
     }
 
     [Inject]

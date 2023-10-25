@@ -16,6 +16,7 @@ public class InventoryPanel : MonoBehaviour
 
     public void Initialize()
     {
+        CurrentSelectedCell = 0;
         _cells = GetComponentsInChildren<InventoryCell>();
         DisableAllFrames();
         _cells[0].Frame.enabled = true;

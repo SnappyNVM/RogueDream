@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5716202a954447f4db28b77f558df205, type: 3}
-  m_Name: TriangleGun
+  m_Name: CoolTriangleGun
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Triangle Gun
-  <Icon>k__BackingField: {fileID: 21300000, guid: d3cfabb86c44bef49b63d1abfea8b351, type: 3}
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 950cec4dccf0e0b4284ccb7b9e2924e4, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 7494f37fb7cf8fd4dbfdf91ec3303daa, type: 3}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: c9b0ed40d7cf2d44980f71545c02cffd, type: 3}
   <Description>k__BackingField: Like echpochmak but with an aful smell...
+  <FormulaicItem>k__BackingField: {fileID: 6637441429294024720, guid: 2683fc0ce647a4d41b50514f6ae7b4ff, type: 3}
