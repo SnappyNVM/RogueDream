@@ -18,7 +18,7 @@ public class Inventory : ScriptableObject
     public event Action<InventoryItemConfig, int> InventoryFillingChanged;
 
 
-    public void ChangeItem(InventoryItemConfig inventoryItemConfig, int itemID)
+    public void ReplaceItem(InventoryItemConfig inventoryItemConfig, int itemID)
     {
         if (itemID == 0)
             _item1 = inventoryItemConfig;

@@ -6,6 +6,7 @@ public interface IInput
     public event Action<Vector2> MouseButtonDown;
     public event Action<Vector2> MouseButtonUp;
     public event Action<Vector2> Move;
+    public event Action InteractiveButtonUp;
     public bool InteractiveButtonPressed { get; }
 
     public Vector2 MovingDirection { get; }

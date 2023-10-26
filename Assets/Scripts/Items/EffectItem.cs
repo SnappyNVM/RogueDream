@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EffectItem : InventoryItem
+public sealed class EffectItem : InventoryItem
 {
     [field: SerializeField] public EffectItemConfig EffectItemConfig { get; private set; }
 

@@ -11,9 +11,9 @@ public class DesktopInput : IInput, IFixedTickable, ITickable
     public event Action<Vector2> MouseButtonDown;
     public event Action<Vector2> MouseButtonUp;
     public event Action<Vector2> Move;
+    public event Action InteractiveButtonUp;
+
     public bool InteractiveButtonPressed => _interactiveButtonPressed;
-
-
     public bool IsMoving => MovingDirection != Vector2.zero;
     public Vector2 MovingDirection => _framePositionChanges;
 
@@ -29,7 +29,10 @@ public class DesktopInput : IInput, IFixedTickable, ITickable
             _interactiveButtonPressed = true;
 
         if (Input.GetKeyUp(KeyCode.E))
+        {
             _interactiveButtonPressed = false;
+            InteractiveButtonUp.Invoke();
+        }
     }
 
     public void FixedTick()

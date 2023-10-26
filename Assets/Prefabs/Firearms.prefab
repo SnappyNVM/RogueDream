@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f42d59b849f1f0489af12bc2ac3f182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <FirearmsConfig>k__BackingField: {fileID: 0}
+  <FirearmsConfig>k__BackingField: {fileID: 11400000, guid: 6396677fbef2de64f86a63fe03dda6ed, type: 2}
 --- !u!61 &3500699168485758481
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0043925047, y: -0.03612721}
+  m_Offset: {x: -0.0043925047, y: -0.030995607}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -123,5 +123,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5658195, y: 0.7160232}
+  m_Size: {x: 0.8463428, y: 0.91786337}
   m_EdgeRadius: 0

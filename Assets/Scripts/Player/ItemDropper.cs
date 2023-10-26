@@ -11,6 +11,6 @@ public class ItemDropper : MonoBehaviour
     {
         var spawnedObject = Instantiate(_player.Inventory.Items[cellID].FormulaicItem, _player.transform.position, Quaternion.identity);
         spawnedObject.Config = _player.Inventory.Items[cellID];
-        _player.Inventory.ChangeItem(null, cellID);
+        _player.Inventory.ReplaceItem(null, cellID);
     }
 }

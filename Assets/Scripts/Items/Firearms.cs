@@ -8,6 +8,5 @@ public sealed class Firearms : Weapon
     {
         WeaponConfig = FirearmsConfig;
         Config = WeaponConfig;
-        Debug.Log("Firearms works!");
     }
 }

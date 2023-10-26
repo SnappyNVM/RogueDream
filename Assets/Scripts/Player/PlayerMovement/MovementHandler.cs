@@ -17,6 +17,7 @@ public class MovementHandler : IDisposable
         _input.MouseButtonDown += OnMouseDown;
         _input.MouseButtonUp += OnMouseUp;
         _input.Move += OnMove;
+        _input.InteractiveButtonUp += OnInteractiveButtonUp;
     }
 
     public void Dispose()
@@ -24,6 +25,7 @@ public class MovementHandler : IDisposable
         _input.MouseButtonDown -= OnMouseDown;
         _input.MouseButtonUp -= OnMouseUp;
         _input.Move -= OnMove;
+        _input.InteractiveButtonUp -= OnInteractiveButtonUp;
     }
 
     private void OnMouseDown(Vector2 mousePosition)
@@ -35,6 +37,9 @@ public class MovementHandler : IDisposable
     {
 
     }
+
+    private void OnInteractiveButtonUp() =>
+        _player.ItemPickuper.ChangeItemPressFlagToFalse();
 
     private void OnMove(Vector2 deltaMove) =>
         _player.Rigidbody.MovePosition(_player.Rigidbody.position + deltaMove.normalized * _player.PlayerConfig.Speed * Time.deltaTime);
