@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5716202a954447f4db28b77f558df205, type: 3}
   m_Name: CoolTriangleGun
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Triangle Gun
+  <Name>k__BackingField: Cool Triangle Gun
   <Icon>k__BackingField: {fileID: 21300000, guid: 7494f37fb7cf8fd4dbfdf91ec3303daa, type: 3}
   <Sprite>k__BackingField: {fileID: 21300000, guid: c9b0ed40d7cf2d44980f71545c02cffd, type: 3}
   <Description>k__BackingField: Like echpochmak but with an aful smell...

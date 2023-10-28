@@ -1,10 +1,9 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ItemPickuper : MonoBehaviour
 {
     [SerializeField] private Player _player;
-    private bool _isStayingInsideOfItem;
+    private bool _isConfigReplaced;
     private bool _isTakenItemThisPress;
     private InventoryItem _takingItem;
 
@@ -21,19 +20,19 @@ public class ItemPickuper : MonoBehaviour
     {
         if (_player.MovementHandler.IsInteractiveButtonPressed && _isTakenItemThisPress == false)
         {
-            if (_takingItem == null) return; 
-            bool configReplaced = false;
+            if (_takingItem == null) return;
+            _isConfigReplaced = false;
             for (int i = 0; i < _player.Inventory.Items.Length; i++)
             {
                 if (_player.Inventory.Items[i] == null)
                 {
-                    configReplaced = true;
+                    _isConfigReplaced = true;
                     _player.Inventory.ReplaceItem(_takingItem.Config, i);
                     break;
                 }
             }
 
-            if (configReplaced == false) 
+            if (_isConfigReplaced == false) 
             {
                 _player.ItemDropper.DropItem(_player.Inventory.InventoryPanel.CurrentSelectedCell);
                 _player.Inventory.ReplaceItem(_takingItem.Config,
