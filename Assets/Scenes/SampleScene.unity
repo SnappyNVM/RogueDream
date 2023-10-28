@@ -1558,9 +1558,29 @@ PrefabInstance:
       value: -0.017674863
       objectReference: {fileID: 0}
     - target: {fileID: 7199829838458006097, guid: ab372fba19bbea1469a7d54a6bf2968a, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e6f99800ed73de4e8a4aa0faa6861ae, type: 2}
+    - target: {fileID: 7199829838458006097, guid: ab372fba19bbea1469a7d54a6bf2968a, type: 3}
       propertyPath: _itemDresser
       value: 
       objectReference: {fileID: 1727665856}
+    - target: {fileID: 7199829838458006097, guid: ab372fba19bbea1469a7d54a6bf2968a, type: 3}
+      propertyPath: _itemDropper
+      value: 
+      objectReference: {fileID: 1727665859}
+    - target: {fileID: 7199829838458006097, guid: ab372fba19bbea1469a7d54a6bf2968a, type: 3}
+      propertyPath: _itemPickuper
+      value: 
+      objectReference: {fileID: 1727665853}
+    - target: {fileID: 7199829838458006097, guid: ab372fba19bbea1469a7d54a6bf2968a, type: 3}
+      propertyPath: _playerConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e1c38a3c679986449af345c547bf4c1, type: 2}
+    - target: {fileID: 7199829838458006097, guid: ab372fba19bbea1469a7d54a6bf2968a, type: 3}
+      propertyPath: _itemFunctionalHandler
+      value: 
+      objectReference: {fileID: 1727665862}
     - target: {fileID: 7199829838458006098, guid: ab372fba19bbea1469a7d54a6bf2968a, type: 3}
       propertyPath: m_Constraints
       value: 4

@@ -5,6 +5,7 @@ public class ItemFunctionalHandler : MonoBehaviour
     private IItemFunctional _currentItemFunctional;
     public Transform ShootPoint { get; set; }
     public Player Player { get; private set; }
+    public IItemFunctional CurrentItemFunctional => _currentItemFunctional;
 
     public void Initialize(Player player, Transform shootPoint)
     {

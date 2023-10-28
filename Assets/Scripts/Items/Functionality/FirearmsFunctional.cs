@@ -6,6 +6,7 @@ public class FirearmsFunctional : IItemFunctional
     private readonly FirearmsConfig _firearmsConfig;
     private float _currentCooldown;
     private Projectile _projectile;
+    public bool IsMouseButtonPressed { get; set; }
 
     public void Initialize(ItemFunctionalHandler itemFunctionalHandler)
     {
@@ -13,9 +14,11 @@ public class FirearmsFunctional : IItemFunctional
         _currentCooldown = _firearmsConfig.DamageCooldown;
     }
 
+
+
     public void Work()
     {
-        if (_currentCooldown <= 0)
+        if (_currentCooldown <= 0 && IsMouseButtonPressed)
         {
             _projectile = GameObject.Instantiate(_firearmsConfig.ProjectileSample,
                 _itemFunctionalHandler.ShootPoint.position,

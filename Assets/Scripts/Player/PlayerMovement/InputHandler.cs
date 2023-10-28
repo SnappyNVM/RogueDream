@@ -30,12 +30,14 @@ public class InputHandler : IDisposable
 
     private void OnMouseDown(Vector2 mousePosition)
     {
-
+        if (_player.ItemFunctionalHandler.CurrentItemFunctional != null)
+            _player.ItemFunctionalHandler.CurrentItemFunctional.IsMouseButtonPressed = true;
     }
 
     private void OnMouseUp(Vector2 mousePosition)
     {
-
+        if (_player.ItemFunctionalHandler.CurrentItemFunctional != null)
+            _player.ItemFunctionalHandler.CurrentItemFunctional.IsMouseButtonPressed = false;
     }
 
     private void OnInteractiveButtonUp() =>
