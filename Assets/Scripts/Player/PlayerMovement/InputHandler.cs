@@ -1,16 +1,16 @@
 using System;
 using UnityEngine;
 
-public class MovementHandler : IDisposable
+public class InputHandler : IDisposable
 {
     private IInput _input;
     private Player _player;
-
+    
+    public Vector3 MousePosition => _input.MousePosition;
     public bool IsMoving => _input.IsMoving;
-
     public bool IsInteractiveButtonPressed => _input.InteractiveButtonPressed;
 
-    public MovementHandler(IInput input, Player player)
+    public InputHandler(IInput input, Player player)
     {
         _input = input;
         _player = player;

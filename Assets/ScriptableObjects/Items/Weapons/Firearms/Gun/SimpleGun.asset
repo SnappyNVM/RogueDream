@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5716202a954447f4db28b77f558df205, type: 3}
-  m_Name: TriangleGun
+  m_Name: SimpleGun
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Triangle Gun
-  <Icon>k__BackingField: {fileID: 21300000, guid: d3cfabb86c44bef49b63d1abfea8b351, type: 3}
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 950cec4dccf0e0b4284ccb7b9e2924e4, type: 3}
-  <Description>k__BackingField: Like echpochmak but with an aful smell...
+  <Name>k__BackingField: Simple Gun
+  <Icon>k__BackingField: {fileID: 21300000, guid: 8f955c01e210e9f4880adec2fc7b8135, type: 3}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 5500b5cbe8fbb9543a9dc17123f09d81, type: 3}
+  <Description>k__BackingField: Just a gun
   <FormulaicItem>k__BackingField: {fileID: 6637441429294024720, guid: 2683fc0ce647a4d41b50514f6ae7b4ff, type: 3}
+  <DamagePerHit>k__BackingField: 1
+  <DamageCooldown>k__BackingField: 0.5
+  ProjectileSpeed: 7
+  ProjectileSample: {fileID: 7705703093367463124, guid: 78c1a232014479549a650cb8694acaf6, type: 3}

@@ -4,7 +4,7 @@ using Zenject;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
-    private MovementHandler _movementHandler;
+    private InputHandler _movementHandler;
     private PlayerConfig _playerConfig;
     private Inventory _inventory;
     private ItemPickuper _itemPickuper;
@@ -12,15 +12,17 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private ItemDresser _itemDresser;
     private ItemDropper _itemDropper;
+    private ItemFunctionalHandler _itemFunctionalHandler;
 
     public Rigidbody2D Rigidbody => _rigidbody;
-    public MovementHandler MovementHandler => _movementHandler;
+    public InputHandler MovementHandler => _movementHandler;
     public PlayerConfig PlayerConfig => _playerConfig;
     public Inventory Inventory => _inventory;
     public Collider2D Collider => _collider;
     public ItemPickuper ItemPickuper => _itemPickuper;  
     public ItemDresser ItemDresser => _itemDresser;
     public ItemDropper ItemDropper => _itemDropper;
+    public ItemFunctionalHandler ItemFunctionalHandler => _itemFunctionalHandler;
 
     private void OnValidate()
     {
@@ -29,10 +31,11 @@ public class Player : MonoBehaviour
         _itemPickuper ??= GetComponent<ItemPickuper>();
         _itemDresser ??= GetComponent<ItemDresser>();
         _itemDropper ??= GetComponent<ItemDropper>();
+        _itemFunctionalHandler ??= GetComponent<ItemFunctionalHandler>();
     }
 
     [Inject]
-    private void Construct(PlayerConfig playerConfig, MovementHandler mh, Inventory inventory)
+    private void Construct(PlayerConfig playerConfig, InputHandler mh, Inventory inventory)
     { 
         _playerConfig = playerConfig;
         _movementHandler = mh;

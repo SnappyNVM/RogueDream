@@ -14,7 +14,7 @@ public class DesktopInput : IInput, IFixedTickable, ITickable
     public event Action InteractiveButtonUp;
 
     public bool InteractiveButtonPressed => _interactiveButtonPressed;
-    public bool IsMoving => MovingDirection != Vector2.zero;
+    public Vector3 MousePosition => Camera.main.ScreenToWorldPoint(Input.mousePosition);
     public Vector2 MovingDirection => _framePositionChanges;
 
     public void Tick()

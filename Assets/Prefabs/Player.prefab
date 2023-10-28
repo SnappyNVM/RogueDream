@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7199829836581646710}
   - component: {fileID: 7199829836581646711}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7199829837021949302}
   - component: {fileID: 7199829837021949303}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7199829837463200052}
   - component: {fileID: 7199829837463200053}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7199829837713164508}
   - component: {fileID: 7199829837713164509}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7199829837802624449}
   - component: {fileID: 7199829837802624450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Leg 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7199829838344549459}
   - component: {fileID: 7199829838344549460}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 7199829838458006096}
   - component: {fileID: 7199829838458006098}
   - component: {fileID: 7199829838458006097}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,4 +593,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc2606dff24a0b46aa2355f8e584791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 7199829838458006098}

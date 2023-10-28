@@ -8,6 +8,8 @@ public abstract class InventoryItemConfig : ScriptableObject
     [field: SerializeField] public Sprite Sprite { get; private set; }
     [field: SerializeField] public string Description { get; private set; }
     [field: SerializeField] public InventoryItem FormulaicItem { get; private set; }
+    public abstract IItemFunctional ItemFunctional { get; protected set; }
+    public abstract void Initialize();
 
     private void OnValidate()
     {
@@ -18,7 +20,7 @@ public abstract class InventoryItemConfig : ScriptableObject
                     ThrowInvalidPrefabExeption(nameof(Firearms));
                 break;
 
-            case nameof(CloseCombatWeapon):
+            case nameof(CloseCombatWeaponConfig):
                 if (FormulaicItem is not CloseCombatWeapon)
                     ThrowInvalidPrefabExeption(nameof(CloseCombatWeapon));
                 break;

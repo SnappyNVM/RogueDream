@@ -22,7 +22,7 @@ public class GameplaySceneInstaller : MonoInstaller
 
     private void BindPlayer()
     {
-        Container.Bind<MovementHandler>().FromNew().AsSingle().Lazy();
+        Container.Bind<InputHandler>().FromNew().AsSingle().Lazy();
         Container.Bind<PlayerConfig>().FromInstance(_playerConfig).AsSingle().Lazy();
         Container.BindInterfacesAndSelfTo<Player>().FromInstance(_player).AsSingle();
     }
