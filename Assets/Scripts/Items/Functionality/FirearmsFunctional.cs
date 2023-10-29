@@ -8,6 +8,9 @@ public class FirearmsFunctional : IItemFunctional
     private Projectile _projectile;
     public bool IsMouseButtonPressed { get; set; }
 
+    public FirearmsFunctional(InventoryItemConfig config) =>
+        _firearmsConfig = (FirearmsConfig)config;
+
     public void Initialize(ItemFunctionalHandler itemFunctionalHandler)
     {
         _itemFunctionalHandler = itemFunctionalHandler;
@@ -15,8 +18,9 @@ public class FirearmsFunctional : IItemFunctional
     }
 
 
+    public void Work() => Shoot();
 
-    public void Work()
+    private void Shoot()
     {
         if (_currentCooldown <= 0 && IsMouseButtonPressed)
         {
@@ -24,12 +28,9 @@ public class FirearmsFunctional : IItemFunctional
                 _itemFunctionalHandler.ShootPoint.position,
                 _itemFunctionalHandler.Player.ItemDresser.UseableItem.transform.rotation);
             _projectile.Rigidbody.AddForce(_firearmsConfig.ProjectileSpeed * _itemFunctionalHandler.ShootPoint.right, ForceMode2D.Impulse);
-            Debug.Log(_projectile.FlyDirection.normalized);
             _currentCooldown = _firearmsConfig.DamageCooldown;
         }
         _currentCooldown -= Time.deltaTime;
     }
 
-    public FirearmsFunctional(InventoryItemConfig config) =>
-        _firearmsConfig = (FirearmsConfig)config;
 }
