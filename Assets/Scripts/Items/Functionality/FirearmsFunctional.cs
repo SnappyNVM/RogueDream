@@ -27,6 +27,7 @@ public class FirearmsFunctional : IItemFunctional
             _projectile = GameObject.Instantiate(_firearmsConfig.ProjectileSample,
                 _itemFunctionalHandler.ShootPoint.position,
                 _itemFunctionalHandler.Player.ItemDresser.UseableItem.transform.rotation);
+            _projectile.CurrentDamage = _firearmsConfig.DamagePerHit;
             _projectile.Rigidbody.AddForce(_firearmsConfig.ProjectileSpeed * _itemFunctionalHandler.ShootPoint.right, ForceMode2D.Impulse);
             _currentCooldown = _firearmsConfig.DamageCooldown;
         }

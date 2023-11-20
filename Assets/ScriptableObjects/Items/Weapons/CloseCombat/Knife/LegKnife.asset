@@ -18,4 +18,4 @@ MonoBehaviour:
   <Description>k__BackingField: Just a legendary knife
   <FormulaicItem>k__BackingField: {fileID: 3982052667665185083, guid: 35d3c7c5579bb4649a154b25ac38cdf7, type: 3}
   <DamagePerHit>k__BackingField: 7
-  <DamageCooldown>k__BackingField: 0.5
+  <DamageCooldown>k__BackingField: 0.1

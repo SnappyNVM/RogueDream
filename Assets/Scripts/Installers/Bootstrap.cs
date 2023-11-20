@@ -9,8 +9,10 @@ public class Bootstrap : MonoBehaviour
     [SerializeField] private InventoryPanel _inventoryPanel;
     [SerializeField] private GameObject _useableItem;
     [SerializeField] private CursorFollower _cursorFollower;
+    [SerializeField] private CursorFlipper _cursorFlipper;
     [SerializeField] private ItemFunctionalHandler _itemFunctionalHandler;
     [SerializeField] private Transform _shootPoint;
+    [SerializeField] private CloseCombatAnimator _closeCombatAnimator;
 
     private void Awake()
     {
@@ -19,6 +21,7 @@ public class Bootstrap : MonoBehaviour
         _inventoryPanel.Initialize();
         _player.ItemDresser.Initialize(_itemsSpawnPos, _useableItem);
         _cursorFollower.Initialize(_player);
-        _itemFunctionalHandler.Initialize(_player, _shootPoint);
+        _cursorFlipper.Initialize(_player);
+        _itemFunctionalHandler.Initialize(_player, _shootPoint, _closeCombatAnimator);
     }
 }

@@ -4,21 +4,20 @@ public class ItemFunctionalHandler : MonoBehaviour
 {
     private IItemFunctional _currentItemFunctional;
     public Transform ShootPoint { get; set; }
+    public CloseCombatAnimator CloseCombatAnimator { get; private set; }
     public Player Player { get; private set; }
     public IItemFunctional CurrentItemFunctional => _currentItemFunctional;
 
-    public void Initialize(Player player, Transform shootPoint)
+    public void Initialize(Player player, Transform shootPoint, CloseCombatAnimator closeCombatAnimator)
     {
         ShootPoint = shootPoint;
         Player = player;
+        CloseCombatAnimator = closeCombatAnimator;
     }
 
     public void UpdateFunctional(InventoryItemConfig inventoryItemConfig)
     {
-        if (inventoryItemConfig != null)
-            _currentItemFunctional = inventoryItemConfig.ItemFunctional;
-        else
-            _currentItemFunctional = null;
+        _currentItemFunctional = inventoryItemConfig != null ? inventoryItemConfig.ItemFunctional  : null; 
         _currentItemFunctional?.Initialize(this);
     }
 
