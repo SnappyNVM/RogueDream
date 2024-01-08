@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Bootstrap : MonoBehaviour
 {
+    [Header("Objects")]
     [SerializeField] private Animator _playerAnimator;
     [SerializeField] private PlayerAnimationChanger _playerAnimationChanger;
     [SerializeField] private Player _player;
@@ -13,15 +14,17 @@ public class Bootstrap : MonoBehaviour
     [SerializeField] private ItemFunctionalHandler _itemFunctionalHandler;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private CloseCombatAnimator _closeCombatAnimator;
+    [SerializeField] private HealthBar _healthBar;
+    [SerializeField] private Heart _heartPrefab;
 
     private void Awake()
     {
+        _player.Initialize(_healthBar, _heartPrefab);
         _playerAnimationChanger.Initialize(_playerAnimator);
         _player.Inventory.Initialize(_inventoryPanel);
         _inventoryPanel.Initialize();
         _player.ItemDresser.Initialize(_itemsSpawnPos, _useableItem);
         _cursorFollower.Initialize(_player);
         _cursorFlipper.Initialize(_player);
-        _itemFunctionalHandler.Initialize(_player, _shootPoint, _closeCombatAnimator);
     }
 }

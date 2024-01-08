@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: MainPlayerConfig
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 10
+  <HealthPoints>k__BackingField: 5
+  <DamageCooldown>k__BackingField: 1
+  <DamageImpulseForce>k__BackingField: 1500
+  <DamageDizzinessDelay>k__BackingField: 0.3
